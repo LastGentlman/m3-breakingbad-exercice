@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const routes = require("./routes");
+const routes = require("./src/ruotes"); // aqui estaba solo './routes'
 const app = express();
 //==========================================//
 // Middlewares
