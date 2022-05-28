@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require('uuid'); //libreria para crear ids
 const URL = 'https://www.breakingbadapi.com/api/';
 
 let todosLosPj = [
