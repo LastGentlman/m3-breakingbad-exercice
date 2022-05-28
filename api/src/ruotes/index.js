@@ -1,26 +1,25 @@
-const { Router, response, request } = require("express");
+const { Router } = require('express');
 const router = Router();
 
+//Traer la logica
 const {
-    getQuote,
-    getCharacters,
-    addCharacters,
-    getCharacterById,
-    getEpisodes,
-    getEpisodeById } = require('../controllers');
+  getQuotes,
+  getCharacters,
+  addCharacter,
+  getCharacterById,
+  getEpisodes,
+  getEpisodesById,
+  changeCharacter,
+  deleteCharacter,
+} = require('../controllers');
 
 // Aqui crearemos nuestras rutas
-
-router.get('/quote', getQuote)
-
-router.get('/characters', getCharacters)
-
-router.post('/characters', addCharacters)
-
-router.get('/characters/:id', getCharacterById)
-
-router.get('/episodes', getEpisodes)
-
-router.get('/episodes/:id', getEpisodeById)
-
+router.get('/quotes', getQuotes);
+router.get('/characters', getCharacters);
+router.post('/characters', addCharacter);
+router.get('/characters/:id', getCharacterById);
+router.get('/episodes', getEpisodes);
+router.get('/episodes/:id', getEpisodesById);
+router.put('/characters/:id', changeCharacter);
+router.delete('/characters/:id', deleteCharacter);
 module.exports = router;
